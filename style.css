@@ -1,1 +1,64 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(210, 233, 221);
+}
 
+.whole-calculator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid gray;
+    padding: 10px;    
+    border-radius: 10%;
+    box-shadow: 10px 5px 5px rgb(136, 134, 134);
+    background-color: rgb(255, 255, 255);
+    border-right: 4px solid  rgb(83, 83, 83);
+    border-bottom: 4px solid  rgb(83, 83, 83);
+}
+
+.whole-calculator .view {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 15px;
+    border: 1px solid grey;
+    width: 90%;
+    height: 32px;
+    background-color: rgb(8, 165, 113);
+    border: 2px solid black;
+    border-radius: 5%;
+    box-shadow: inset 3px 3px 5px 2px rgb(38, 65, 13);
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+}
+
+.whole-calculator .buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+.row button {
+    margin: 2px;
+    padding: 17px;
+    border: 2px solid orange;
+    background-color: #F5F5F5;
+    width: 100%;
+    border-radius: 5%;
+    box-shadow: 2px 2px 2px gray;
+    font-family: "Audiowide", sans-serif;
+}
+
+.buttons #calc{
+    background-color: #D3D3D3;
+  }

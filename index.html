@@ -4,47 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="../The-Calculator/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Orbitron'>
+
+    <script src="../The-Calculator/javascript.js"></script>    
     <title>Calculator</title>
 </head>
 <body>
-    <div class="container">
-        <h3 class="main-title">The Calculator</h3>
-            <div class="whole-calculator">
-                <div class="screen"></div>
-                    <div class="number-display"></div>
+    <h3> The Bulbulator</h3>
 
-                <div class="buttons">
-                    <div class="operations">
-
-                        <div class="clear"></div>
-                        <div class="division"></div>
-                        <div class="multiplication"></div>
-                        <div class="addition"></div>
-                        <div class="subtraction"></div>
-                        
-                    </div>
-                    <div class="numbers-equal">
-                        <div class="numbers">
-
-                            <div class="one"></div>
-                            <div class="two"></div>
-                            <div class="three"></div>
-                            <div class="four"></div>
-                            <div class="five"></div>
-                            <div class="six"></div>
-                            <div class="seven"></div>
-                            <div class="eight"></div>
-                            <div class="nine"></div>
-
-                        </div>
-                        <div class="zero-equals">
-                            <div class="zero"></div>
-                            <div class="equals"></div>
-                        </div>
-                    </div>
-                </div>
+    <div class="whole-calculator">
+        <div class="view">000000</div>
+        <div class="buttons">
+            <div class="row">
+                <button class="seven">7</button>
+                <button class="eight">8</button>
+                <button class="nine">9</button>
+                <button class="add" id="calc">+</button>
+            </div>
+            <div class="row">
+                <button class="four">4</button>
+                <button class="five">5</button>
+                <button class="six">6</button>
+                <button class="sub" id="calc">-</button>
+            </div>
+            <div class="row">
+                <button class="one">1</button>
+                <button class="two">2</button>
+                <button class="three">3</button>
+                <button class="multi" id="calc">*</button>
+            </div>
+            <div class="row">
+                <button class="zero">0</button>
+                <button class="clear" id="calc">C</button>
+                <button class="equal" id="calc">=</button>
+                <button class="divis" id="calc">/</button>
             </div>
         </div>
-    
+    </div>
 </body>
 </html>
