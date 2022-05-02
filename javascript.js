@@ -16,7 +16,58 @@ function multiplication (a, b){
     return a*b;
 }
 
+
+
+function loopThroughButtons(){
+
+    let view = document.getElementsByClassName('view')[0]
+    let buttons = document.getElementsByClassName("row");
+    let rowButtons
+    let oldNumber
+    let operator
+
+
+    for(i = 0; i<buttons.length; i++){
+
+        for(j = 0; j<buttons[i].children.length; j++){
+
+            let specificButton = buttons[i].children[j]
+
+            if(specificButton.id != 'calc'){
+
+                specificButton.addEventListener('click', (e) =>{
+
+                    if(view.textContent === "0"){
+                        view.textContent = e.target.textContent
+                    }else if(view.textContent != "0"){
+                        view.textContent += e.target.textContent
+                    } 
+
+                })
+            }else if(specificButton.id === "calc"){
+
+                if(specificButton.textContent != '='){
+                    
+                    specificButton.addEventListener('click', (e)=>{
+                        oldNumber = saveValue(view.textContent)
+                        operator = e.target.textContent
+                    })
+
+                }if(specificButton.textContent === '='){
+                    specificButton.addEventListener('click', (e) =>{
+                        
+                    })
+                }
+                
+
+                
+            }
+        }
+    }
+}
+
 function operate (a, b, operator){
+
     if (operator == "*"){
         multiplication(a, b)
     }else if(operator == "/"){
@@ -28,34 +79,15 @@ function operate (a, b, operator){
     }
 }
 
-function loopThroughButtons(){
+function saveValue(a){
+    let savedValue = a
 
-    let view = document.getElementsByClassName('view')[0]
-    let buttons = document.getElementsByClassName("row");
-    let rowButtons
+    clearView()
 
-    for(i = 0; i<buttons.length; i++){
-
-        for(j = 0; j<buttons[i].children.length; j++){
-
-            let specificButton = buttons[i].children[j]
-            console.log(specificButton)
-
-            if(specificButton.id != 'calc'){
-
-                specificButton.addEventListener('click', (e) =>{
-                    if(view.textContent === "0"){
-                        view.textContent = e.target.textContent
-                    }else if(view.textContent != "0"){
-                        view.textContent += e.target.textContent
-                    }
-                   
-                })
-
-            }
-        }
-    }
-
+    return savedValue
 }
 
-
+function clearView (){
+    let view = document.getElementsByClassName('view')[0]
+    view.textContent = "0"
+}
